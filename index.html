@@ -7,80 +7,131 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    padding: 40px 15px;
 }
+
 .container {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  margin: 20px;
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
-input, select, button {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border-radius: 8px;
-  border: none;
-  font-size: 16px;
-  box-sizing: border-box;
+
+h2,
+h3 {
+    color: #2c3e50;
+    margin-bottom: 18px;
+    text-align: left;
 }
+
+input,
+select {
+    width: 100%;
+    padding: 11px 14px;
+    margin-bottom: 15px;
+    border: 1px solid #d6d6d6;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: .2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #0d6efd;
+}
+
 button {
-  background: #6a11cb;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 11px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .2s;
 }
+
 button:hover {
-  background: #2575fc;
+    background: #0b5ed7;
 }
+
 table {
-  width: 100%;
-  border-collapse: collapse;
-  background: rgba(0,0,0,0.2);
-  border-radius: 8px;
-  overflow: hidden;
-  table-layout: fixed;
-  word-wrap: break-word;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
 }
-th, td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  word-wrap: break-word;
-  overflow-wrap: anywhere;
-}
+
 th {
-  background: rgba(0,0,0,0.3);
+    background: #0d6efd;
+    color: white;
+    font-weight: 600;
 }
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #e4e4e4;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background: #fafafa;
+}
+
+tr:hover {
+    background: #f1f5ff;
+}
+
+.delete-btn {
+    background: #dc3545;
+    padding: 7px 12px;
+    width: auto;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background: #bb2d3b;
+}
+
 .graph-container {
-  width: 100%;
-  height: 300px;
-  margin-top: 10px;
+    margin-top: 30px;
+    height: 350px;
 }
+
 canvas {
-  background: white;
-  border-radius: 16px;
-  padding: 10px;
-  max-width: 100%;
-  height: 100% !important;
-  box-sizing: border-box;
+    background: white;
+}
+
+@media (max-width:768px) {
+
+    .container {
+        padding: 18px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+    }
+
 }
 </style>
 </head>
